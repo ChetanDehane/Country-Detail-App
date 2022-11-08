@@ -1,0 +1,42 @@
+<div class="container mt-3 pt-5" *ngIf="isNotEmpty()">
+    <div class="row">
+        <div class="col">
+            <p class="h3 text-danger">{{country.name.common}}</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non laborum corporis sapiente quaerat maxime accusamus magnam a sit. Sed reiciendis eaque ipsum expedita earum doloremque quidem commodi dolor natus totam alias, enim explicabo tenetur ratione laborum nulla beatae esse. Tempora!</p>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="isNotEmpty()">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img [src]="country.flags.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    Name : {{country.name.common}}
+                                </li>
+                                <li class="list-group-item">
+                                    Full Name : {{country.name.official}}
+                                </li>
+                                <li class="list-group-item">
+                                    Code : {{country.flag}}
+                                </li>
+                                <li class="list-group-item">
+                                    Population : {{country.population | number}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a routerLink="/countries" class="btn btn-danger btn-sm">Back</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
